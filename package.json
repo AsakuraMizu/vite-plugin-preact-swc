@@ -1,0 +1,62 @@
+{
+  "name": "vite-plugin-preact-swc",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Asakura Mizu <asakuramizu111@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AsakuraMizu/vite-plugin-preact-swc"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "swc",
+    "preact",
+    "prefresh"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish"
+  },
+  "peerDependencies": {
+    "vite": "^4 || ^5"
+  },
+  "dependencies": {
+    "@prefresh/core": "^1.5.2",
+    "@prefresh/utils": "^1.2.0",
+    "@swc/core": "^1.7.10",
+    "@swc/plugin-prefresh": "^2.0.9"
+  },
+  "devDependencies": {
+    "@antfu/ni": "^0.22.1",
+    "@eslint/js": "^9.9.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^22.2.0",
+    "bumpp": "^9.4.2",
+    "eslint": "^9.9.0",
+    "eslint-config-flat-gitignore": "^0.1.8",
+    "preact": "^10.23.1",
+    "prettier": "^3.3.3",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.0.1",
+    "vite": "^5.4.0"
+  }
+}

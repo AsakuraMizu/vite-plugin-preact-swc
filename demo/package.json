@@ -1,0 +1,10 @@
+{
+  "name": "demo",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "dev:build": "vite build",
+    "dev:preview": "vite preview"
+  }
+}
